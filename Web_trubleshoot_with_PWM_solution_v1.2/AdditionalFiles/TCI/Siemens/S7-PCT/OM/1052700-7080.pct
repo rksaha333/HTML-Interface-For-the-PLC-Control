@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PCTProject Version="2.4" PlcID="{1052700-7080}" ProjectType="1" ItemCount="9" ProjectReadPath="" Protection="">
+  <!--Diese Datei darf nicht bearbeitet werden.
+Die Anwendung prüft die Datei auf Bearbeitung und verwendet sich nicht mehr, wenn sie bearbeitet wurde.-->
+  <Structure>
+    <RemoteDevice Reference="{1052700-7080}" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/head_module">
+      <Master ModuleReference="{1052689-7179}" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/modules/6ES7-278-4BD32-0XB0/V2.0" />
+    </RemoteDevice>
+  </Structure>
+  <Configuration ItemCount="8">
+    <Item Type="RemoteDevice" ID="{1052700-7080}" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/head_module">
+      <Parameter Name="ConfigObjectType" Value="3" Type="Int32" />
+      <Parameter Name="DeviceReference" Value="{1052700-7080}" Type="String" />
+      <Parameter Name="Identification" Value="{1052700-7080}" Type="String" />
+      <Parameter Name="Name" Value="Baugruppenträger_0" Type="String" />
+      <Parameter Name="ObjectUUID_LocalIndex" Value="1" Type="String" />
+    </Item>
+    <Item Type="Master" ID="{1052689-7179}" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/modules/6ES7-278-4BD32-0XB0/V2.0">
+      <Parameter Name="ConfigObjectType" Value="5" Type="Int32" />
+      <Parameter Name="dataset_1_prm_telegram" Value="0;0;0;0;0;0;0" Type="Byte[]" />
+      <Parameter Name="dataset_222_header_input_length" Value="8" Type="Byte" />
+      <Parameter Name="dataset_222_header_output_length" Value="0" Type="Byte" />
+      <Parameter Name="dataset_222_header_port_quality_offset_bit" Value="0" Type="Byte" />
+      <Parameter Name="dataset_222_header_port_quality_offset_byte" Value="255" Type="Byte" />
+      <Parameter Name="dataset_229_master_diag_status" Value="0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0" Type="Byte[]" />
+      <Parameter Name="dataset_231_block_1_hw_revision" Value="2" Type="UInt16" />
+      <Parameter Name="dataset_231_block_1_serial_number" Value="S C-K1PC9545    " Type="String" />
+      <Parameter Name="dataset_231_block_1_sw_revision" Value="1442971649" Type="UInt32" />
+      <Parameter Name="EnablePortQualityInfo" Value="0" Type="Byte" />
+      <Parameter Name="IdentNumber" Value="0" Type="Int32" />
+      <Parameter Name="MasterFreeze" Value="0" Type="Byte" />
+      <Parameter Name="Name" Value="4SI IO link_1" Type="String" />
+      <Parameter Name="PortQualityInfoLength" Value="4" Type="Byte" />
+      <Parameter Name="ProfinetIOApi" Value="0" Type="Int32" />
+      <Parameter Name="SFMData" Value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;PortCollection xmlns=&quot;http://tempuri.org/XMLSchema.xsd&quot;&gt;&lt;PortConfiguration portNumber=&quot;1&quot; portMode=&quot;IO-Link&quot; comment=&quot;&quot;&gt;&lt;DeviceInfo vendorName=&quot;Hans Turck GmbH &amp;amp; Co.KG&quot; deviceName=&quot;RU40U-M18E-LIU2PN8X2T-H1151&quot; productName=&quot;RU40U-M18E-LIU2PN8X2T-H1151&quot; orderNumber=&quot;1610024&quot; /&gt;&lt;InputAddressMapping byteOffset=&quot;0&quot; bitOffset=&quot;0&quot; bitLength=&quot;16&quot; /&gt;&lt;/PortConfiguration&gt;&lt;PortConfiguration portNumber=&quot;2&quot; portMode=&quot;Deactivated&quot; comment=&quot;&quot; /&gt;&lt;PortConfiguration portNumber=&quot;3&quot; portMode=&quot;Deactivated&quot; comment=&quot;&quot; /&gt;&lt;PortConfiguration portNumber=&quot;4&quot; portMode=&quot;Deactivated&quot; comment=&quot;&quot; /&gt;&lt;/PortCollection&gt;" Type="String" />
+      <Parameter Name="Slot" Value="2" Type="Byte" />
+    </Item>
+    <Item Type="Port" ID="{1052689-7179}1" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/ports/6ES7-278-4BD32-0XB0/V2.0">
+      <Parameter Name="BackupLevel" Value="2" Type="Byte" />
+      <Parameter Name="ConfigObjectType" Value="6" Type="Int32" />
+      <Parameter Name="CycleTimeActual" Value="40" Type="Byte" />
+      <Parameter Name="CycleTimeTarget" Value="20" Type="Byte" />
+      <Parameter Name="data_storage_activation_state" Value="1" Type="Byte" />
+      <Parameter Name="Identification" Value="{1052689-7179}1" Type="String" />
+      <Parameter Name="InputAddressLength" Value="16" Type="Byte" />
+      <Parameter Name="InspectLevel" Value="3" Type="Byte" />
+      <Parameter Name="Mode" Value="3" Type="Byte" />
+      <Parameter Name="port_status" Value="7" Type="Byte" />
+      <Parameter Name="port_status_operate" Value="1" Type="Byte" />
+    </Item>
+    <Item Type="Port" ID="{1052689-7179}2" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/ports/6ES7-278-4BD32-0XB0/V2.0">
+      <Parameter Name="ConfigObjectType" Value="6" Type="Int32" />
+      <Parameter Name="Identification" Value="{1052689-7179}2" Type="String" />
+      <Parameter Name="port_status" Value="5" Type="Byte" />
+      <Parameter Name="PortNumber" Value="2" Type="Byte" />
+    </Item>
+    <Item Type="Port" ID="{1052689-7179}3" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/ports/6ES7-278-4BD32-0XB0/V2.0">
+      <Parameter Name="ConfigObjectType" Value="6" Type="Int32" />
+      <Parameter Name="Identification" Value="{1052689-7179}3" Type="String" />
+      <Parameter Name="port_status" Value="5" Type="Byte" />
+      <Parameter Name="PortNumber" Value="3" Type="Byte" />
+    </Item>
+    <Item Type="Port" ID="{1052689-7179}4" DDL="/DEVICE/IO-Link/REMOTEIO/SIEMENS/pno_io-link_master/ports/6ES7-278-4BD32-0XB0/V2.0">
+      <Parameter Name="ConfigObjectType" Value="6" Type="Int32" />
+      <Parameter Name="Identification" Value="{1052689-7179}4" Type="String" />
+      <Parameter Name="port_status" Value="5" Type="Byte" />
+      <Parameter Name="PortNumber" Value="4" Type="Byte" />
+    </Item>
+  </Configuration>
+  <IODeviceList ItemCount="1">
+    <IODevice Master="{1052689-7179}" Port="1">
+      <Configuration DDL="/DEVICE/IO-Link/SENSOR/HANS_TURCK/317_263168/2017-10-27/V11/1610024" vendorId="317" deviceId="263168">
+        <Information>
+          <Comment />
+        </Information>
+        <ParameterList>
+          <Parameter Name="ConfigObjectType" Value="7" Type="Int32" />
+          <Parameter Name="Identification" Value="cc7362d0-ac22-4e9e-a99f-a8997097c5f4" Type="String" />
+          <Parameter Name="Name" Value="RU40U-M18E-LIU2PN8X2T-H1151" Type="String" />
+          <Parameter Name="TabIndex" Value="0" Type="Int32" />
+        </ParameterList>
+      </Configuration>
+    </IODevice>
+  </IODeviceList>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>4bsK58mRxLJmc9u5So70jOd6iTE=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>ZB+BEdYGnzZRLe9Cudgg+9Ss7CYZN7/kFPJAO7jRMONXqtt9dn3dfBOcVFmXibY8dBx1Ioi6lpilOrVwKXY1eF3zx9mE0/6wXZCZS89O5zKCJFGQjepLt2j/emQUEgUMmMdsBppkRJ1LewbMP4VihAeDGbl0IHm5tL+NIU81OQA=</SignatureValue>
+    <KeyInfo>
+      <KeyValue>
+        <RSAKeyValue>
+          <Modulus>oNMm+FLgLEaWjz8+gQkeeY924gO4LDNU1WtGWZeccCzu5Phdjghp1JDwevy5wbkWeCrawnNdoY1+0Rvr24YrPDD9bRAHwuOEtHl2dhrntWf+yWe/8l+UedHKNnu1ynkvuRGmagxDL12PlCNaA3NTr4v6LdhL/T7NerUM8wMhyfU=</Modulus>
+          <Exponent>AQAB</Exponent>
+        </RSAKeyValue>
+      </KeyValue>
+    </KeyInfo>
+  </Signature>
+</PCTProject>

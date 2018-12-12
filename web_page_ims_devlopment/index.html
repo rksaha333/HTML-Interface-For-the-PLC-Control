@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+        <head>
+                <title>IMS Steuerung</title>
+                <meta name="author" content="Witali Rempel">
+                <meta name="copyright" content="">
+                <meta charset="utf-8" />
+                <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+                <meta name="mobile-web-app-capable" content="yes" />
+                <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+                <link rel="stylesheet" href="my.css" />
+
+		<script src="jquery.min.js"></script>
+                <script src="jquery-1.7.2.min.js"></script>
+		<script src="jquery.mobile-1.2.0.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.post("/FormLogin", { Login: "admin", Password: "" } );
+			});
+		</script>  
+
+        </head>
+
+        <body>
+
+	<!-- Auswahl -->
+                <div data-role="page" id="auswahl">
+                        <div data-role="header">
+				<img style="display:block; margin-left: 6px; margin-top: 4px; position: absolute; width: 40px;" src="Logo.jpg" />
+                                <h1>IMS Station</h1>
+                        </div>
+                       
+                        <div data-role="content" style="margin-top:100px" >
+				<!--<div id="In40">
+                                	<p> <a href="in40.html" data-ajax="false" data-role="button">Industrie 4.0</a></p>
+				</div>-->
+				<div id="menuebuttons1">
+                                	<p> <a href="ims1.html" data-ajax="false" data-role="button">IMS 1</a></p>	
+                                	<p> <a href="ims3_1.html" data-ajax="false" data-role="button">IMS 3.1</a></p>
+                                	<p> <a href="ims3_2.html" data-ajax="false" data-role="button">IMS 3.2</a></p>	
+                                	<p> <a href="ims4_1.html" data-ajax="false" data-role="button">IMS 4.1</a></p>	
+				</div>
+                        
+                 	
+				<div id="menuebuttons2">		
+                                	<p> <a href="ims4_2.html" data-ajax="false" data-role="button">IMS 4.2</a></p>	
+                                	<p> <a href="ims5_1.html" data-ajax="false" data-role="button">IMS 5.1</a></p>	
+                               		<p> <a href="ims5_2.html" data-ajax="false" data-role="button">IMS 5.2</a></p>	
+                                	<p> <a href="ims7.html" data-ajax="false" data-role="button">IMS 7</a></p>	
+				</div>
+                        </div>
+                   
+
+                        <div data-role="footer">
+                                <div data-role="navbar">
+                                        <ul>
+                                                <li> <a href="ims1.html" data-ajax="false" data-icon="arrow-l">IMS 1</a> </li>
+                                                <li> <a href="#auswahl" data-ajax="false" data-icon="grid">Home</a> </li>
+                                                <li> <a href="ims7.html" data-ajax="false" data-icon="arrow-r">IMS7</a> </li>
+                                        </ul>
+                                </div>
+                        </div>
+                </div>
+       	</body>
+</html>

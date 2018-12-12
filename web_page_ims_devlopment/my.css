@@ -1,0 +1,323 @@
+label{font-weight: bold; line-height: 33pt; }
+.ui-slider-switch{float: left;}
+.ui-field-contain{ margin:0px 0; padding: 0;}
+
+.ui-navbar.ui-mini { margin: 0 auto; max-width: 100%; }	
+.ui-footer { padding: 0px 0; border-bottom: none; }
+
+.ui-footer.ui-bar-a { position: fixed; width: 100%;  bottom: 0; z-index: 1000;}  
+.ui-content { margin-left: 0px; margin-bottom: 57px; margin-top: 20px;  }	
+.ui-header.ui-bar-a { position: fixed; width: 100%; top: 0; z-index: 1000; }	
+
+.ui-field-contain div.ui-slider-switch {width:100%;}
+
+
+#ims1station {
+	position:absolute;
+	left:400px;
+	top:400px;
+	width:850px;
+	height:180px;
+	text-align: center;}
+
+#station {
+	position:absolute;
+	left:400px;
+	width:850px;
+	top:50px;
+	height: 290px;
+	text-align: center;}
+
+#menuebuttons1 {
+	position: absolute;
+	margin-right:8px;
+	left:10%;
+	width:30%;
+	right:51%;
+	}
+#menuebuttons2 {
+	position: absolute;
+	left:51%;
+	width:30%;
+	right:10%;
+	}
+
+#sensorstation {
+	position: absolute;
+	bottom: 150px;
+	width:380px;
+	top:50px;
+	text-align: left;
+	}
+
+#sensorstation1 {
+	position: absolute;
+	background-color:"black";
+	width:700px;
+	top:100px;
+	text-align: left;
+	}
+	
+#sensorstation2{
+	position: absolute;
+	background-color:"black";
+	width:700px;
+	left:400px;
+	top:100px;
+	text-align: left;
+	}
+
+.pic {
+	position:absolute;
+	top:150px;
+	bottom:250px;
+	left:50px;
+	right:0;
+	height:300px;
+	width:100%;
+}
+
+#reg{
+	position:absolute;
+	left:50px;
+	top:60px;
+	width:180px;}
+
+#buttonstation1 {
+	position: absolute;
+	left:0px;
+	width : 400px;
+	text-align: left;
+	top:400px;
+	} 
+#buttonstation2 {
+	position: absolute;
+	left:400px;
+	width : 600px;
+	text-align: left;
+	top:400px;
+	} 
+
+#buttonablauf {
+	position: absolute;
+	width: 200px;
+	}
+
+#ablauf {
+	position: absolute;
+	left:400px;
+	width : 240px;
+	text-align: left;
+	top:350px;
+	}
+
+#sensorenims1 {
+    	position: absolute;
+    	text-align: left;
+	width: 195px;
+	top: 50px; 
+	}
+
+#buttonims1 {
+	position: absolute;
+	left: 400px;
+	width: 250px;
+    	text-align: left;
+	top: 50px; 
+	}
+
+
+#status {
+    	   position: absolute;
+	   left: 300px;
+	   top: 470px; 
+ 	   width: 200px;
+	   height: 160px;
+	} 
+
+#imsstatus {
+    	   position: absolute;
+	   left: 30px;
+	   top: 400px; 
+ 	   width: 300px;
+	   height: 100px;
+	   text-align: center;
+	} 
+
+#sensoren_ims1 {
+  	  position: absolute;
+  	  bottom: 57px;
+  	  top: 360px;
+  	  left: 100px;
+  	  text-align: right;
+	  width: 150px;
+	  }
+
+.sensor {
+ 	   width: 20px;
+ 	   height: 20px;
+ 	   border-radius: 100px;
+ 	   background-color: olive;
+	}
+
+.rahmen {
+	   border: 3px;
+	   padding:6px;
+     	   border-style: solid;
+     	   border-color: grey;
+	   text-shadow:none;
+	   text-align:center;
+	}
+.linie {
+	border-top:3px solid;
+	margin:0px;
+	}
+
+.anzeige {
+ 	   border-radius: 16px;
+	   text-align:center;
+ 	   background-color: lightgrey;
+ 	   line-height: 41px;
+	   text-shadow:none;		
+	   font-size:18px;
+	   font-weight:bold;
+	   color:black;
+	}
+.blink {
+ 	   border-radius: 16px;
+	   text-align:center;
+ 	   background-color: red;
+ 	   line-height: 41px;
+	   text-shadow:none;		
+	   font-size:18px;
+	   font-weight:bold;
+	   color:black;
+	}
+
+#werkstueck {
+	   position: absolute;
+	   left: 550px;
+	   top: 470px; 
+ 	   width:400px;
+	   height: 160px;
+	   }
+.WP_bwp{
+	background-image:url(images/WP_bwp.jpg); 
+	background-size: 140px;}
+.WP_wbp{
+	background-image:url(images/WP_wbp.jpg); 
+	background-size: 140px;}
+.WP_wwp{
+	background-image:url(images/WP_wwp.jpg); 
+	background-size: 140px;}
+.WP_bbp{
+	background-image:url(images/WP_bbp.jpg); 
+	background-size: 140px;}
+.WP_bbm{
+	background-image:url(images/WP_bbm.jpg); 
+	background-size: 140px;}
+.WP_wwm{
+	background-image:url(images/WP_wwm.jpg); 
+	background-size: 140px;}
+.WP_bwm{
+	background-image:url(images/WP_bwm.jpg); 
+	background-size: 140px;}
+.WP_wbm{
+	background-image:url(images/WP_wbm.jpg); 
+	background-size: 140px;}
+
+#ims3_1 {
+	   position: absolute;
+	   left: 820px;
+	   top: 150px; 
+ 	   width:80px;
+	}
+#ims3_2 {
+	   position: absolute;
+	   left: 650px;
+	   top: 150px; 
+ 	   width:80px;
+	}
+#ims4_1 {
+	   position: absolute;
+	   left: 475px;
+	   top: 150px; 
+ 	   width:80px;
+	}
+#ims4_2 {
+	   position: absolute;
+	   left: 280px;
+	   top: 150px; 
+ 	   width:80px;
+	}
+#ims5_1 {
+	   position: absolute;
+	   left: 230px;
+	   top: 390px; 
+ 	   width:80px;
+	}
+#ims5_2 {
+	   position: absolute;
+	   left: 475px;
+	   top: 390px; 
+ 	   width:80px;
+	}
+#ims7_1 {
+	   position: absolute;
+	   left: 680px;
+	   top: 390px; 
+ 	   width:80px;
+	}
+#ims1_1 {
+	   position: absolute;
+	   left: 840px;
+	   top: 390px; 
+ 	   width:80px;
+	}	     
+
+.container {
+		-webkit-appearance: none;
+		position: absolute;
+		left:400px;
+		top: 650px;
+		width: 400px;
+				
+}
+.slidecontainer {
+		-webkit-appearance: none;
+		position: absolute;
+		left:0px;
+		top: 80px;
+		width: 600px;
+				
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: lime;
+    outline: ;
+    opacity: 0.9;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+     width: 10px;
+    height: 30px;
+    background:blue;
+    cursor: pointer;
+}
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background:blue;
+    cursor: pointer;	
+}
+

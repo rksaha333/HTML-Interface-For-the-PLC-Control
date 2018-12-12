@@ -1,0 +1,387 @@
+<!-- AWP_In_Variable Name='"Q_IMS3B_M1"' -->
+<!-- AWP_In_Variable Name='"Q_IMS3B_M2"' -->
+<!-- AWP_In_Variable Name='"Q_IMS3B_QR"' -->
+<!-- AWP_In_Variable Name='"Q_IMS3B_QL"' -->
+<!-- AWP_In_Variable Name='"I_IMS3B_start"'-->
+
+
+
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>IMS Steuerung</title>
+                <meta name="author" content="">
+                <meta name="copyright" content="">
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+                <link rel="stylesheet" href="my.css" />
+
+				<script src="jquery-1.7.2.min.js"></script>	
+                <script src="ims.js"></script>
+				<script src="jquery.mobile-1.2.0.min.js"></script>
+				<script src="jquery.min.js"></script>
+
+<script type="text/javascript">
+		    $(document).ready(function(){
+		        $.ajax({ cache: false }); 
+			setInterval(function() {
+			    $.getJSON("IO_ims3_2.html", function(data){
+			        if (data.sen1 == 1){
+				document.getElementById("sensor1").style.backgroundColor = "lime";} 
+				else{document.getElementById("sensor1").style.backgroundColor = "black";}
+
+			        if (data.sen2 == 1){
+				document.getElementById("sensor2").style.backgroundColor = "lime";} 
+				else{document.getElementById("sensor2").style.backgroundColor = "black";}
+
+			        if (data.sen3 == 1){
+				document.getElementById("sensor3").style.backgroundColor = "lime";} 
+				else{document.getElementById("sensor3").style.backgroundColor = "black";}	
+					
+					if (data.sen4 == 1){
+				document.getElementById("sensor4").style.backgroundColor = "lime";} 
+				else{document.getElementById("sensor4").style.backgroundColor = "black";}	
+					
+									
+				if (data.err == 1){
+					$('#error').css({'background-color':'red'});
+					$('#error').html("No Workpiece");}
+				else{
+					$('#error').css({'background-color':'lime'});
+					$('#error').html("Ready to work");}
+			    });
+			},100); 
+		     }); 
+</script>
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+</head>
+
+         <body>
+
+<!-- IMS 3 -->
+            <div data-role="page" id="ims3">
+                        <div data-role="header">
+                                <img style="display:block; margin-left: 6px; margin-top: 4px; position: absolute; width: 40px;" src="Logo.jpg" />
+                                <h1>IMS 3B</h1>
+                        </div>
+
+						<div data-role="content">
+
+                     	  	<div data-role="pic">
+                                        <img style="display:block; margin-left: 50px; margin-top: 20px; position: absolute; width: 300px;" src="IMS_3.jpg" alt="IMS 3" />
+                        	</div>
+
+								<div id="station">
+									<h2 style="text-align:center"><ins>IMS 3-2 Sorting</ins></h2>
+	                        
+										<table id="sensorstation1">
+											<h2 style="text-align:left;"><ins >Sensors</ins></h2>
+											<tr>
+												<td>
+													<div class="sensor" id="sensor1"> </div>
+												</td>  
+												<td>
+												<label for="sensor1">Left Position Sensor</label>
+												</td> 
+											</tr>	
+											<tr>
+												<td>
+													<div class="sensor" id="sensor2"></div>
+												</td>
+												
+												<td>
+													<label for="sensor2">Right Position	Sensor</label>
+												</td>
+											</tr>
+										</table>
+										<table id="sensorstation2">
+											
+											<tr>
+												<td>
+													<div class="sensor" id="sensor3"> </div>							
+												</td>  
+												<td>
+													<label for="sensor3">Stopper Up</label>
+												</td> 
+											</tr>
+											<tr>
+												
+												<td>
+													<div class="sensor" id="sensor4"> </div>							
+												</td>  
+												<td>
+													<label for="sensor4">Magazine Full</label>
+												</td>
+											</tr>
+																	
+										</table>
+
+	                        <table id="buttonstation1">
+							<tr>
+								<td style="width:100px;">	
+        	                       <form action="" method="post">
+										<div data-role="fieldcontain">
+                        	                        <fieldset data-role="controlgroup">
+                                        	                <select name='"Q_IMS3B_QR"' data-theme="" data-role="slider" onchange="sent(this)">
+                                                	                <option id="IMS3B_RechtslaufAUS" value="0">Off</option>
+                                                        	        <option id="IMS3B_RechtslaufEIN" value="1">On</option>
+                                                        	</select>
+          	                                         </fieldset>
+										</div>
+                                	</form>
+				                </td>
+								<td style="text-align:left;"><label>Drive Right</label></td>
+							</tr>	
+							
+							<tr>
+								<td style="width:100px;">	
+        	                       <form action="" method="post">
+										<div data-role="fieldcontain">
+                        	                        <fieldset data-role="controlgroup">
+                                        	                <select name='"Q_IMS3B_QL"' data-theme="" data-role="slider" onchange="sent(this)">
+                                                	                <option id="IMS3B_LinkslaufAUS" value="0">Off</option>
+                                                        	        <option id="IMS3B_LinkslaufEIN" value="1">On</option>
+                                                        	</select>
+          	                                         </fieldset>
+										</div>
+                                	</form>
+				                </td>
+								<td style="text-align:left;"><label>Drive Left</label></td>
+							</tr>	
+
+						<!--	
+
+							<tr>
+				
+								<td>
+									<form action="" method="post">
+        	                            <div data-role="fieldcontain">
+                	                        <fieldset data-role="controlgroup">
+                                	            <select name='"Q_IMS3B_QRS"' data-theme="" data-role="slider" onchange="sent(this)">
+                                        	        <option id="IMS3B_MototrrightspeedOff" value="0">Off</option>
+                                                    <option id="IMS3B_MototrrightspeedOn" value="1">On</option>
+                                               	</select>
+                                           	</fieldset>
+                                        </div>
+									</form>
+								</td>
+								<td style="text-align:left;"><label>Drive Right Slow</label></td>
+							</tr>
+							
+							
+							<tr>
+				
+								<td>
+									<form action="" method="post">
+        	                            <div data-role="fieldcontain">
+                	                        <fieldset data-role="controlgroup">
+                                	            <select name='"Q_IMS3B_QLS"' data-theme="" data-role="slider" onchange="sent(this)">
+                                        	        <option id="IMS3B_MototrleftspeedOff" value="0">Off</option>
+                                                    <option id="IMS3B_MototrleftspeedOn" value="1">On</option>
+                                               	</select>
+                                           	</fieldset>
+                                        </div>
+									</form>
+								</td>
+								<td style="text-align:left;"><label>Drive Left Slow</label></td>
+							</tr>
+							-->
+						</table>
+						
+						<table id="buttonstation2">
+
+							<tr>
+				
+								<td>
+									<form action="" method="post">
+        	                            <div data-role="fieldcontain">
+                	                        <fieldset data-role="controlgroup">
+                                	            <select name='"Q_IMS3B_M1"'	data-theme="" data-role="slider" onchange="sent(this)">
+                                        	        <option id="IMS3B_StopperOff" value="0">Off</option>
+                                                    <option id="IMS3B_StopperOn" value="1">On</option>
+                                               	</select>
+                                           	</fieldset>
+                                        </div>
+									</form>
+								</td>
+								<td style="text-align:left;"><label>Stopper Down</label></td>
+							</tr>
+
+							<tr>
+				
+								<td>
+									<form action="" method="post">
+        	                            <div data-role="fieldcontain">
+                	                        <fieldset data-role="controlgroup">
+                                	            <select name='"Q_IMS3B_M2"'	data-theme="" data-role="slider" onchange="sent(this)">
+                                        	        <option id="IMS3B_SeparatorOff" value="0">Off</option>
+                                                    <option id="IMS3B_SeparatorOn" value="1">On</option>
+                                               	</select>
+                                           	</fieldset>
+                                        </div>
+									</form>
+								</td>
+								<td style="text-align:left;"><label>Separate</label></td>
+							</tr>
+										
+						</table>
+			</div>
+			
+			
+						<table id="ablauf">
+							<tr>
+								<td style="width:100px;"><label><h2><ins>Control</ins></h2></label></td>
+						
+								<td style="width:200px;">	
+        	                       <form action="" method="post">
+										<div data-role="fieldcontain">
+                        	                        <fieldset data-role="controlgroup">
+                                        	                <select name='"I_IMS3B_start"'	data-theme="" data-role="slider" onchange="sent(this)">
+                                        	                        <option id="IMS3B_StartOff" value="0">Enable</option>
+                                                	                <option id="IMS3B_StartOn" value="1">Disable</option>
+                                                        	</select>
+          	                                         </fieldset>
+										</div>
+                                	</form>
+				                </td>
+							</tr>	
+						</table>
+			<!-- station number IMS1
+			<table id="ablauf">
+							<tr>
+								<td style="width:100px;"><label>Control</label></td>
+						
+								<td style="width:200px;">	
+        	                       <form action="" method="post">
+										<div data-role="fieldcontain">
+                        	                        <fieldset data-role="controlgroup">
+                                        	                <select name='"I_IMS3B_start"'	data-theme="" data-role="slider" onchange="sent(this)">
+                                        	                        <option id="IMS3B_StartOff" value="0">Enable</option>
+                                                	                <option id="IMS3B_StartOn" value="1">Disable</option>
+                                                        	</select>
+          	                                         </fieldset>
+										</div>
+                                	</form>
+				                </td>
+							</tr>	
+						</table>
+			
+			<div id="ims1station" class="linie">
+				<h3>IMS 1 - Conveyor belt</h3>
+	                        
+							<table id="sensorstation1">
+        	                        <tr><td><div class="sensor" id="sensor6"> </div></td>  <td><label for="sensor6"> Sensor B1 </label></td> </tr>
+                	                <tr><td><div class="sensor" id="sensor7"> </div></td>  <td><label for="sensor7"> Sensor B2 </label></td> </tr>
+                          	</table>
+
+	                        <table id="buttonstation">
+				<tr>
+				<td style="width:100px;">	
+        	                       <form action="" method="post">
+										<div data-role="fieldcontain">
+                        	                        <fieldset data-role="controlgroup">
+                                        	                <select name='"RightMove_IMS1"' data-theme="" data-role="slider" onchange="sent(this)">
+                                                	                <option id="IMS1_RechtslaufAUS" value="0">Off</option>
+                                                        	        <option id="IMS1_RechtslaufEIN" value="1">On</option>
+                                                        	</select>
+          	                                         </fieldset>
+										</div>
+                                	</form>
+				</td>
+				<td style="text-align:left;"><label>Right Move</label></td>
+				</tr>
+				
+				<tr>
+				<td>
+	                        <form action="" method="post">
+        	                        <div data-role="fieldcontain">
+                	                                <fieldset data-role="controlgroup">
+                                	                        <select name='"LeftMove_IMS1"' data-theme="" data-role="slider" onchange="sent(this)">
+                                        	                        <option id="IMS1_LinkslaufAUS" value="0">Off</option>
+                                                	                <option id="IMS1_LinkslaufEIN" value="1">On</option>
+                                                        	</select>
+                                           		</fieldset>
+                                    	</div>
+                       		</form>
+				</td>
+				<td style="text-align:left;"><label>Left Move</label></td>
+				</tr>
+				
+				<tr>
+				
+				<td>
+	                        <form action="" method="post">
+        	                                <div data-role="fieldcontain">
+                	                                <fieldset data-role="controlgroup">
+                                	                        <select name='"Speed_IMS1"' data-theme="" data-role="slider" onchange="sent(this)">
+                                        	                        <option id="IMS1_SchleichgangAUS" value="0">Off</option>
+                                                	                <option id="IMS1_SchleichgangEIN" value="1">On</option>
+                                                        	</select>
+                                                	</fieldset>
+                                        	</div>
+                            </form>
+				</td>
+				
+				<td style="text-align:left;"><label>Speed Control Move</label></td>
+				</tr>
+				
+								
+                        	</table>
+			</div>
+		-->
+			
+		
+			<!--
+			<div class="container">
+				<h3 style="text-align:left">Motor Speed Controller</h3>
+				<tr>	
+					<td>
+						<form action="" method="post">
+        	                                <div data-role="fieldcontain">
+                	                                <fieldset data-role="controlgroup">                                  						
+														<input type="range" min="0" max="1000" value="200"  class="slider" id="myRange" name='"SpeedWeb_IMS1"' onchange="sent(this)" />
+														 <p>Value: <span id="demo" ></span></p>                                                       
+													</fieldset>		
+											</div>
+						</form>
+					</td>
+
+				</tr>
+			</div>
+			-->
+		</div>	
+			
+			
+		
+	                        <div data-role="footer">
+        	                        <div data-role="navbar">
+                	                        <ul>
+											
+                        	                        <li> <a href="ims3_1.html" data-ajax="false" data-icon="arrow-l">Previous</a> </li>
+        	                                        <li> <a href="index.html" data-ajax="false" data-icon="grid" >Home</a> </li>
+	                                                <li> <a href="ims4_1.html" data-ajax="false" data-icon="arrow-r">Next</a> </li>
+                	                       
+											</ul>
+                        	        </div>
+                        	</div>
+                
+				
+			</div>
+	
+
+
+         </body>                                                                                                                                                                                                                                          
+
+</html>
